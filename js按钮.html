@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	#div1{
+		width: 200px;
+		height: 100px;
+		background-color: #ff00ff;
+		border-left: 3px solid red;
+		border-top: 3px solid red;
+		border-radius: 20px;
+	}
+</style>
+
+<script type="text/javascript">
+	function Dete(){		//鼠标经过事件
+		var div1=document.getElementById('div1');
+		div1.style.borderLeft='0px solid red';
+		div1.style.borderTop='0px solid red';
+		div1.style.borderBottom='3px solid red';
+		div1.style.borderRight='3px solid red';
+	}
+	function Demo(){		//鼠标单击事件
+		var div1=document.getElementById('div1');
+		div1.style.borderBottom='5px solid red';
+		div1.style.borderRight='5px solid red';
+	}
+	function Out(){			//鼠标移开事件
+		var div1=document.getElementById('div1');
+		div1.style.borderLeft='3px solid red';
+		div1.style.borderTop='3px solid red';
+		div1.style.borderBottom='0px solid red';
+		div1.style.borderRight='0px solid red';
+	}
+</script>
+</head>
+<body>
+	<div id="div1" onmouseover="Dete()" onclick="Demo()" onmouseout="Out()">
+	</div>
+</body>
+</html>

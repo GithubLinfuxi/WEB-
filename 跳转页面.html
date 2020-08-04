@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>网页跳转</title>
+</head>
+<body onload="date()">
+	<h1>操作成功</h1>
+	<span id="span1">5</span>
+	<span>秒后回到主页</span>
+	<a href="http://www.baidu.com">返回</a>
+	<script type="text/javascript">
+		/*方法一*/
+		// var span = document.getElementById('span1');
+		// var time = 5;
+		// function date(){
+		// 	span.innerHTML = time--;
+		// 	if (time==0) {
+		// 		window.location.href = "http://www.baidu.com";
+		// 	}
+		// }
+		// window.setInterval('date()',1000);
+		
+		/*方法二*/
+		// var span = document.getElementById('span1');
+		// function date(){
+		// 	if(span.innerHTML==0){
+		// 		window.location.href = "http://www.baidu.com";
+		// 	}else{
+		// 		span.innerHTML = span.innerHTML-1;
+		// 	}
+		// }
+		// window.setInterval('date()',1000);
+		//BUG:网页加载直接从4开始！！！
+		
+		/*方法三*/
+		// setTimeout(window.location.href="http://www.baidu.com",3);
+		// 暂时不知道咋回事！加载秒跳转~。。。有点懵
+	</script>
+</body>
+</html>

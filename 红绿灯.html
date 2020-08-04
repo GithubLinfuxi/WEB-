@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <title>模拟红绿灯</title>
+     <style type="text/css" media="screen">
+     .box{
+      width:250px;
+      height:52px;
+      padding:15px 30px;
+      border:2px solid #ccc;
+      border-radius:16px;margin:0 auto;
+    }
+     .box .count{
+      width:60px;
+      color:#666;
+      font-size:280%;
+      line-height:50px;
+      padding-left:6px;
+      margin-left:5px;
+      border:1px solid #fff
+    }
+    .box div{
+      margin-left:5px;
+      float:left;
+      width:50px;
+      height:50px;
+      border-radius:50px;
+      border:1px solid #666;
+    }
+	</style>
+</head>
+<body onload="daojishi()">
+    <div class="box">
+      <div id="red"></div>
+      <div id="yellow"></div>
+      <div id="green"></div>
+      <div class="count" id="count"></div>
+    </div>
+    <script type="text/javascript">
+    	var shuzi = 35;
+    	document.getElementById('green').style.backgroundColor = 'green';
+    	document.getElementById('yellow').style.backgroundColor = '#fff';
+    	document.getElementById('red').style.backgroundColor = '#fff';
+
+    	function daojishi(){
+    	var green = document.getElementById('green').style.backgroundColor;
+    	var yellow = document.getElementById('yellow').style.backgroundColor;
+    	var red = document.getElementById('red').style.backgroundColor;
+    		if (green == 'green' && shuzi <= 0) {
+    			shuzi = 5;
+    			document.getElementById('green').style.backgroundColor = '#fff';
+    			document.getElementById('yellow').style.backgroundColor = 'yellow';
+    			document.getElementById('red').style.backgroundColor = '#fff';
+    		}
+    		if (yellow == 'yellow' && shuzi <= 0) {
+    			shuzi = 30;
+    			document.getElementById('green').style.backgroundColor = '#fff';
+    			document.getElementById('yellow').style.backgroundColor = '#fff';
+    			document.getElementById('red').style.backgroundColor = 'red';
+    		}
+    		if (red == 'red' && shuzi <= 0) {
+    			shuzi = 35;
+    			document.getElementById('green').style.backgroundColor = 'green';
+    			document.getElementById('yellow').style.backgroundColor = '#fff';
+    			document.getElementById('red').style.backgroundColor = '#fff';
+    		}
+    		document.getElementById('count').innerHTML = shuzi;
+    		shuzi--;
+    	}
+    	setInterval('daojishi()',1000);
+    </script>
+</body>
+</html>

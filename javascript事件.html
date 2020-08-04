@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件</title>
+</head>
+<body onload="jiazai(this)" onunload="guangbi(thisn)">
+	<div id="div" style="background-color: red;width: 200px;height: 200px;" onmouseover="Over()" onmouseout="Out()">经过事件和移开事件</div>
+	<input type="button" name="" value="单击事件" onclick="demo()">
+	<script type="text/javascript">
+		function demo(){
+			alert('按钮被单击!');
+		}
+		function Over(){
+			div.innerHTML = Date();
+		}
+		function Out(){
+			div.innerHTML = '移开事件';
+		}
+	</script>
+	<hr>
+	内容改变事件：<input type="text" name="内容改变事件" onchange="text()">
+	文本框选中事件：<input type="text" name="文本框选中事件" value="选中本内容会有提示" onselect="text1(this)">
+	光标聚集事件和光标移开事件：<input type="text" name="光标聚集事件" onfocus="text2(this)" onblur="text3(this)">
+	<script type="text/javascript">
+		function text(){
+			alert('内容被改变！');
+		}		
+		function text1(beijing){
+			alert('文本框选中事件的文本框内容被选中！');
+			beijing.style.background = 'red';
+		}
+		function text2(beijing){
+			beijing.style.background = 'blue';		//这里的‘beijing’是局部变量，所以我可以重新定义，不冲突！
+		}
+		function text3(tishi){
+			alert('光标移开了！！');
+		}
+		function jiazai(tishi){
+			alert('网页加载完毕！');
+		}
+		function guangbi(tishi){
+			alert('网页关闭！');
+		}
+	</script>
+</body>
+</html>
+<!-- ‘this’是一个关键字，指向一个函数。 -->
+<!-- 目前搞不明白关闭事件如何使用！ -->

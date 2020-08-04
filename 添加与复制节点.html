@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>水果图片</h1>
+
+	<input id="tianjia" type="button" name="" value="添加图片">
+	<input id="fuzhi" type="button" name="" value="复制图片">
+	<input id="shanchu" type="button" name="" value="删除图片">
+	<br>
+	<img id="tp1" src="images/sixty1.jpg" alt="图片">
+	<img id="tp2" src="images/sixty2.jpg" alt="图片">
+
+	<script type="text/javascript">
+		var tianjia=document.getElementById('tianjia');
+		var fuzhi=document.getElementById('fuzhi');
+		tianjia.onclick=function(){
+
+			var img=document.createElement('img');
+			img.setAttribute('src','images/sixty1.jpg');
+
+			var tp1=document.getElementById('tp1');
+			document.body.insertBefore(img,tp1);
+		}
+		// fuzhi.onclick=function(){
+		// 	var img=document.createElement('img');
+		// 	img.setAttribute('src','images/sixty2.jpg');
+
+
+		// 	document.body.appendChild(img);//在指定元素的子节点列表的末尾添加一个节点
+		// }
+		// shanchu.onclick=function(){
+		// 	var tupian=document.getElementById('tp1');
+		// 	document.body.removeChild(tupian);
+		// }
+		// //只能删除指定id的图片，如何删除网页中添加的其他图片？
+</script>
+</body>
+</html>

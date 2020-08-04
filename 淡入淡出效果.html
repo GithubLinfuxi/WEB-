@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	#div{
+		width: 500px;
+		height: 500px;
+		/*position: absolute;*/
+	}
+	#div1{
+		width: 300px;
+		height: 500px;
+		background-color: blue;
+		margin-left:-300px; 
+		transition: margin 1.4s/* linear*/;
+		background: rgba(0,0,250,0.5);/*格式为(红,绿,蓝,透明度);*/
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	#div1 ul{
+		font-size: 25px;
+		margin-left: 0px;
+		line-height: 50px;
+		color: red;
+		/*opacity: 0;*/
+/*		list-style-type: none;
+		position: relative;
+		animation-name: ying;
+		animation-delay: 5s;
+		animation: ying 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+/*		animation-delay:2s;*/
+	}
+/*	@keyframes ying{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}*/
+	#div{
+		overflow: hidden;
+	}
+	#div img{
+		width: 500px;
+		height: 500px;
+		/*cursor: pointer;*/
+		transition:0.1s;
+	}
+	#div img:hover{
+		transform: scale(1.4);
+	}
+	#div:hover #div1{
+		margin:0;
+	}
+	#a{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: a;
+		animation-delay: 5s;
+		animation: a 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:1s;
+	}
+		@keyframes a{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#b{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: b;
+		animation-delay: 5s;
+		animation: b 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:1.4s;
+	}
+		@keyframes b{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#c{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: c;
+		animation-delay: 5s;
+		animation: c 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:1.8s;
+	}
+		@keyframes c{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#d{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: d;
+		animation-delay: 5s;
+		animation: d 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:2.2s;
+	}
+		@keyframes d{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#e{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: e;
+		animation-delay: 5s;
+		animation: e 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:2.6s;
+	}
+		@keyframes e{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#f{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: f;
+		animation-delay: 5s;
+		animation: f 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:3s;
+	}
+		@keyframes f{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#g{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: g;
+		animation-delay: 5s;
+		animation: g 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:3.4s;
+	}
+		@keyframes g{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+		#h{
+		list-style: none;
+		position: relative;
+		opacity: 0;
+		animation-name: h;
+		animation-delay: 5s;
+		animation: h 1.5s;
+		animation-fill-mode: forwards;/*动画结束时保持该状态不变*/
+		animation-delay:3.8s;
+	}
+		@keyframes h{
+		0%{opacity: 0; left: 50px;top: 0;}
+		100%{opacity: 1; left: 150px;top: 0;}
+	}
+</style>
+</head>
+<body>
+	<div id="div" onmouseout="demo()">
+		<img src="images/top1.jpg">
+		<div id="div1">
+			<ul>
+				<li id="a">签到</li>
+				<li id="b">补卡</li>
+				<li id="c">入职</li>
+				<li id="d">离职</li>
+				<li id="e">领取</li>
+				<li id="f">发放</li>
+				<li id="g">关闭</li>
+				<li id="h">打开</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html><!-- 
+2019年6月11日13:42:32
+问题如下：
+1.打开页面可以显示效果，但是鼠标移开后再移入div，效果并不像页面初始时出现的效果那样子.
+2.文字如何逐行淡入？？？		已解决
+3.转为JS如何写代码？ -->

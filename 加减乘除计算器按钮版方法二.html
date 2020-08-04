@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function jisuan(fuhao){
+			var sum1, sum2, jg;
+			sum1 = document.getElementById('shu1').value;
+			sum2 = document.getElementById('shu2').value;
+			if (fuhao == '+') {
+				jg = parseInt(sum1) + parseInt(sum2);
+			}
+			if (fuhao == '-') {
+				jg = parseInt(sum1) - parseInt(sum2);
+			}
+			if (fuhao == '*') {
+				jg = parseInt(sum1) * parseInt(sum2);
+			}
+			if (fuhao == '/') {
+				jg = parseInt(sum1) / parseInt(sum2);
+			}
+			document.getElementById('jieguo').value = jg;
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+		第一个数： <input type="text" name="" value="" id="shu1"><br />
+		第二个数： <input type="text" name="" value="" id="shu2"><br />
+		<input type="button" name="" value="+" onclick="jisuan('+')">
+		<input type="button" name="" value="-" onclick="jisuan('-')">
+		<input type="button" name="" value="*" onclick="jisuan('*')">
+		<input type="button" name="" value="/" onclick="jisuan('/')"><br />
+		结果： <input type="text" name="" value="" id="jieguo">
+	</form>
+</body>
+</html>

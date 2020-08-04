@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p id="p1">新浪</p>
+	<input type="button" name="" value="改变层的内容" onclick="teat()"><br>
+	<input type="text" name="season" value="春">
+	<input type="text" name="season" value="夏"><br>
+	<input type="text" name="season" value="秋">
+	<input type="text" name="season" value="冬"><br>
+	<input type="button" name="" value="显示input的内容" onclick="showInput()">
+	<input type="button" name="" value="显示season的内容" onclick="showSeason()">
+	<p id="p2"></p>
+	<script type="text/javascript">
+		function teat(){
+			document.getElementById('p1').innerHTML = '搜狐';
+		}
+		function showInput(){
+			var showInput = document.getElementsByTagName('input');
+			var s='';
+			for(var i = 0;i<showInput.length;i++){
+				s=s+showInput[i].value+'<br />';
+			}
+			document.getElementById('p2').innerHTML=s;
+		}
+		function showSeason(){
+			var showSeason = document.getElementsByName('season');
+			var s='';
+			for(var i = 0;i<showSeason.length;i++){
+				s=s+showSeason[i].value+'<br />';
+			}
+			document.getElementById('p2').innerHTML=s;
+		}
+	</script>
+</body>
+</html>

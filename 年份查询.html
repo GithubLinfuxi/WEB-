@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	年份<input id="nian" type="text" name="">
+	月份<input id="yue" type="text">
+	<input id="btn" type="button" name="" value="查询">
+	<br>
+	<p id="p1"></p>
+	<script type="text/javascript">
+		var nian=document.getElementById('nian');
+		var yue=document.getElementById('yue');
+		var btn=document.getElementById('btn');
+		btn.onclick=function(){
+			var reg=/2[0-9][0-9][0-9]$/;
+			var result=reg.test(nian.value);
+
+			var reg1=/^(0?[1-9]|1[02])$/
+			var result1=reg1.test(yue.value);
+
+			if (result==true&&result1==true) {
+				document.getElementById('p1').innerHTML='成功';
+			}
+			else{
+				document.getElementById('p1').innerHTML='失败';
+			}
+		}
+	</script>
+</body>
+</html>
+<!-- 
+未完善！！！
+1.多写一些判断，例如只输入了年份，月份没输入。进行判断！！！
+ -->

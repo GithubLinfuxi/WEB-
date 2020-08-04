@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		// var i,j,n = parseInt(window.prompt('请输入一个数，计算其中的质数：'));
+		// var i, j, n =10;
+		// for(i = 2;i <= n; i++){		/*i为2，i<n(10)，这里可循环八次！！！从2到9，因为起始值为2，且小于10*/
+
+		// 	for(j = 2; j <= i-1; j++){	
+		// 		if (i % j == 0) break;
+		// 	}
+
+		// 	if (j>=i) {
+		// 		document.write(i + '<br />'); /*输出： 2 3 */
+		// 	}
+
+		// }
+
+
+
+
+
+
+
+
+
+
+		/*算法二如下：*/
+
+// 		var i, j;
+// 		for(i = 2; i < 10; i++){
+// 			for(j = 2; j <= i; j++){
+
+// 				if (i % j == 0 && j != i) break;
+
+// 				if (i % j == 0 && j == i) {
+// 					document.write(j + '<br />');
+// 				}
+// 			}
+// 		}
+
+// 		for(int i=2;i<101;i++)
+//		这个不用说了吧,100以内,质数是从2开始的
+
+//		for(int j=2;j<=i;j++)
+//		质数的定义是只能被1或自己整除,所以从2开始,到该数循环
+
+// 		if(i%j==0&&j!=i)
+//		如果能整除且不等于自己,就退出循环(非素数)
+
+// 		if(i%j==0&&j==i)
+//		若只能被自己整除,就是素数
+
+
+
+
+
+
+
+
+
+
+// var i, j;
+// for(i = 2; i < 100; i++){
+// 	for(j = 2; j <= i; j++){
+// 		if (i % j == 0 && j != i) break;
+// 		if (i % j == 0 && j == i) {
+// 			document.write(i + '<br />');
+// 		}
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+/*判断输入的数是不是素数*/
+var i,n = parseInt(window.prompt('输入一个数判断是不是素数：'))
+for(i = 2; i < n; i++){
+	// document.write(i + '<br />');
+	if (n % i == 0) break;
+}
+if (i == n)
+	document.write('Yes!');
+else 
+	document.write('No!');
+
+// 例如你输入n(7)，虽然n(7) % i(2) == 0 不成立，并且i(2)==n(7)也不成立.
+// 为什么呢？因为循环第一次的时候i为2，所以都不满足质数的条件。
+// 但是i(2) < n(7) 要循环到这个条件不成立为止，循环到第六次的时候i(7) < n(7) 此时条件不成立，终止循环！。
+// 接着判断i(7) == n(7),此时的i为n同等！
+// 且输出yes!;
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

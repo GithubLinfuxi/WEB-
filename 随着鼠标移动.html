@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>随着鼠标移动</title>
+	<style type="text/css">
+	#div1{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		border-radius: 50%;
+	}
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script type="text/javascript">
+		var div1=document.getElementById('div1');//获取元素
+		document.onmousemove=function(event){//onmousemove 鼠标移动后执行函数
+			var x=event.pageX-50;//获取鼠标在页面的水平坐标
+			var y=event.pageY-50;//获取鼠标在页面的垂直坐标
+			document.getElementById('div1').style.position='absolute';
+			document.getElementById('div1').style.left=x+'px';
+			document.getElementById('div1').style.top=y+'px';
+		}
+	</script>
+</body>
+</html>

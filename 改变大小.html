@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#div1{
+			width: 250px;
+			height: 250px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"><p id="p1">初始大小</p></div>
+	<input type="button" name="" value="变大" onclick="Da()">
+	<input type="button" name="" value="变小" onclick="Xiao()">
+	<script type="text/javascript">
+		function Da(){
+			var div=document.getElementById('div1');
+			document.getElementById('p1').innerHTML = '大';
+			div.style.width='500px';
+			div.style.height='500px';
+			div.style.backgroundColor='red';
+		}
+		function Xiao(){
+			var div=document.getElementById('div1');
+			document.getElementById('p1').innerHTML = '小';
+			div.style.width='100px';
+			div.style.height='100px';
+			div.style.backgroundColor='blue';
+		}
+	</script>
+</body>
+</html>

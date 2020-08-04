@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+</head>
+<body>
+	<table id="Table" border="1" width="30%" cellspacing="0">
+		<tr>
+			<th>书名</th>
+			<th>价格</th>
+		</tr>
+		<tr>
+			<td>羊皮卷</td>
+			<td>￥58.00</td>
+		</tr>
+		<tr>
+			<td>墨菲定律</td>
+			<td>￥68.00</td>
+		</tr>
+	</table>
+	<input type="button" name="" value="添加一行" onclick="tianjia()">
+	<input type="button" name="" value="删除一行" onclick="shanchu()">
+	<input type="button" name="" value="修改标题" onclick="xiugai()">
+
+	<script type="text/javascript">
+		var Table=document.getElementById('Table');
+		function tianjia(){
+			var tr=Table.insertRow(2);
+			var td1=tr.insertCell(0);
+			td1.innerHTML='羊皮卷';
+			var td2=tr.insertCell(1);
+			td2.innerHTML='￥58.00';
+		}
+		function shanchu(){
+			Table.deleteRow(2);
+		}
+		function xiugai(){
+			var yh=Table.rows[0];
+			yh.style.backgroundColor='#ccc';
+			yh.style.color='red';
+		}
+	</script>
+</body>
+</html>

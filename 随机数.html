@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>抽奖</title>
+	<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	#div{
+		width: 500px;
+		height: 200px;
+		margin: 0 auto;
+		margin-top: 200px;
+		text-align: center;
+	}
+	input{
+		width: 100px;
+		height: 50px;
+		font-size: 30px;
+		background-color: red;
+	}
+	#text{
+		font-size: 60px;
+		color: red;
+	}
+</style>
+<script type="text/javascript">
+	var jishiqi;
+	function suiji(){
+		var shuzu = ['美的冰箱','海尔电视','惠普电脑','时尚雨伞','智能电饭煲','暑假作业一套','毒液篮球鞋一双','5000元大奖'];
+		var text = document.getElementById('text');
+			var i = Math.round(Math.random()*(shuzu.length-1));//随机数
+			text.innerHTML = shuzu[i];
+		}
+		function kaishi(){
+			clearInterval(jishiqi);
+			jishiqi = setInterval('suiji()',100)
+		}
+		function jieshu(){
+			clearInterval(jishiqi);
+		}
+	</script>
+</head>
+<body>
+	<div id="div">	
+		<div id="text">开始抽奖！</div>
+		<input type="button" name="" value="开始" onclick="kaishi()">
+		<input type="button" name="" value="结束" onclick="jieshu()">
+		<input type="button" name="" value="测试" onclick="suiji()">
+	</div>
+
+</body>
+</html>

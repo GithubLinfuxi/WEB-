@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	var shengfen = ['海南省','广东省','浙江省'];
+	var chengshi = [['海口市','三亚市','琼海市'],['广州市','深圳市','湛江市'],['杭州市','温州市']];
+
+
+	function init(){
+		var province = document.getElementById("province");
+		var city = document.getElementById("city");
+		for(var i = 0; i < shengfen.length; i++){
+			var op = new Option(shengfen[i],i);
+			province.options.add(op);
+		}
+		for(var j = 0; j < chengshi[0].length; j++){
+			var op = new Option(chengshi[0][j],j);
+			city.options.add(op);
+		}
+	}
+
+
+	function provinceChage(){
+		var province = document.getElementById("province");
+		var city = document.getElementById("city");
+		var a = province.value;
+		city.options.length = 0;//清除城市下拉列表框里的选项
+		for(var j = 0; j < chengshi[a].length; j++){
+			var op = new Option(chengshi[a][j],j);
+			city.options.add(op);
+		}
+	}
+	</script>
+</head>
+<body onload="init()">
+	省份：
+	<select id="province" onchange="provinceChage()">
+		
+	</select>
+	城市：
+	<select id="city">
+		
+	</select>
+</body>
+</html>

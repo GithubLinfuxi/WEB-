@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变div的样式1</title>
+	<style type="text/css">
+	#div1{
+		width: 100px;
+		height: 100px;
+		background-color: #ccc;
+	}
+</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<button onclick="green()">绿色</button>
+	<script type="text/javascript">
+		function green(){
+			var div = document.getElementById("div1");
+			div.style.backgroundColor = "green";//设置样式
+		}
+	</script>
+</body>
+</html>

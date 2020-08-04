@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{
+		padding: 0;
+		margin: 0;
+	}
+	.div{
+		width: 150px;
+		height: 150px;
+		/*background-color: #000;*/
+		margin: 200px;
+		position: relative;
+	}
+	.div1,.div2{
+		width: 100px;
+		height: 150px;
+		background-color: red;
+		position: absolute;
+		border-radius: 50px 50px 0 0;
+	}
+	.div1{
+		top: 0;
+		left: 0;
+		transform: rotate(-50deg);
+	}
+	.div2{
+		top: 0;
+		left:41px;
+		transform: rotate(42deg);
+	}
+</style>
+</head>
+<body>
+	<div class="div">
+		<div class="div1"></div>
+		<div class="div2"></div>
+	</div>
+</body>
+</html>

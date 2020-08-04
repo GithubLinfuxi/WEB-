@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function fu(){
+			for(var i = 0,funt = [];i < arguments.length; i++){
+				// var str = arguments.length;//获取函数的参数个数，从0开始。
+				// alert(str);
+				// document.write(arguments[i] + '<br />');
+				funt.push(arguments[i]);
+			}
+			document.write(funt.join('-') + '<br />');
+		}
+		fu();
+		fu(1);
+		fu(1,2);
+		fu(1,2,3);
+		fu(1,2,3,4);
+	</script>	
+</body>
+</html>

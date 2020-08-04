@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//有红、白、黑三种球若干个，其中红、白球共25个，白、黑球共31个，红、黑球共28个，求这三种球各有多少个？
+		for(var red = 0; red <= 25;red ++){
+			var w = 25-red;
+			var b = 28-red;
+			if (31 == w + b) {
+				alert('r = ' + red + 'w = ' + w + 'b = ' + b);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var tody = new Date();
+		var hourNow = tody.getHours();
+		var greeting;
+
+		//基于当前时间显示适当的问候语
+		if (hourNow > 18) {
+			greeting = '晚上好！';
+		} else if (hourNow > 12) {
+			greeting = '下午好！';
+		} else if (hourNow > 0) {
+			greeting = '早上好！';
+		} else {
+			greeting = 'welcome!';
+		}
+		alert(greeting);
+		// document.write(greeting);
+	</script>
+</body>
+</html>s1s1

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<script type="text/javascript">
+		function tijiao(){
+			var zhanghao=document.getElementById("zhanghao").value;
+			document.getElementById("zhanghao").value=zhanghao;
+			h1.style.color="red";
+			var one=zhanghao.charAt(0);
+			if (zhanghao.length <= 0) {			//判断id为zhanghao的文本框里的字符是否为0
+				h1.innerHTML="用户名不能为空！";
+			}
+			/*else if (zhanghao[0].charCodeAt() <= 57 && zhanghao[0].charCodeAt() >= 48) {
+				h1.innerHTML="用户名不能已数字开头！";
+			}*/
+/*			else if (zhanghao.charCodeAt(0) <= 57 && zhanghao.charCodeAt(0) >= 48) {	
+				h1.innerHTML="用户名不能已数字开头！";//这的charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。
+			}*/
+/*			else if (!((one >='A' && one <= 'Z')||(one >='a' && one <= 'z'))) {
+				h1.innerHTML="用户名请以字母开头！"; //判断除了A-Z或者a-z，输入其余的字符都提示“请以字母开头！”
+			}*/
+			else if (zhanghao.charAt(0) <= "9" && zhanghao.charAt(0) >= "0") {	
+				h1.innerHTML="用户名不能已数字开头！";
+			}
+			else if (zhanghao.length < 3 || zhanghao.length > 10) { //小于3个字符或者大于10个字符都提示！
+				h1.innerHTML="用户名长度必须在3~10之间！";
+			}
+			else{
+				h1.innerHTML="恭喜你，用户名输入正确！";
+			}
+			// h1.innerHTML=zhanghao; 
+			// alert(zhanghao.charCodeAt());
+		}
+		function chongZhi(){
+			h1.innerHTML = '';
+		}
+	</script>
+</head>
+<body>
+	<form action="post" method="">
+		<input type="text" id="zhanghao">
+		<input type="button" value="提交" id="tj" onclick="tijiao()">
+		<input type="reset" name="" value="重置" onclick="chongZhi()">
+		<br>
+		<h1 id="h1"></h1>
+	</form>
+</body>
+</html>

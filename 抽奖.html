@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+	var shijian;
+		function kaishi(){
+			var shuju=['19985622354','15589875623','18789115371','16698915423','13789115317','18689905371','15298916624','18965234562','19090909980'];//数组（数据）
+			var text = document.getElementById("text");		//获取id为text的内容
+			var shuiji = Math.floor(Math.random()*shuju.length);	//取随机数
+			text.innerHTML=shuju[shuiji]; 	//改变id为text的内容（innerHTML）
+			// text.style.color="red";
+		}
+		function dingshiqi(){
+			clearInterval(shijian);//结束定时器
+			shijian = setInterval("kaishi()",200); //定时器
+		}
+		function tingzhi(){
+			clearInterval(shijian);	//结束定时器
+		}
+	</script>
+</head>
+<body>
+	<h1 id="text" style="color: red;">抽奖啦！</h1>
+	<form accept="" method="post">
+		<input type="button" name="" value="开始" onclick="dingshiqi()">
+		<input type="button" name="" value="停止" onclick="tingzhi()">
+	</form>
+</body>
+</html>

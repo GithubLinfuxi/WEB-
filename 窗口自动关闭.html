@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+	body{
+		background-color: 
+	}
+	</style>
+</head>
+<body>
+<input type="button" name="" value="打开窗口" onclick="dakai()">
+<script type="text/javascript">
+	var baidu;
+	function dakai(){
+		// baidu=window.location.href="http://www.baidu.com";//关闭不了
+		baidu = window.open('http://www.baidu.com');
+		// window.location.reload('http://www.4399.com');//可关闭，不可跳转
+		setTimeout('guanbi()',3000);
+	}
+	function guanbi(){
+		// close();//可关闭不可跳转
+		baidu.close();
+		document.body.style.backgroundColor='red';
+	}
+	// setTimeout('guanbi()',3000);//这个不能放这里，因为一打开窗口就开始计时了，并不是像把它放到点击函数里，因为只有点击了才开始运行这段代码，才开始计时。
+</script>	
+</body>
+</html>
+<!-- 关闭不了 -->

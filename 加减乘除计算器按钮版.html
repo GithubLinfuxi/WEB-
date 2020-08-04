@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function jia(){
+			var sum1,sum2,jg;
+			sum1 = document.getElementById('shu1').value;/*引用id为shu1的值到sum1里*/
+			sum2 = document.getElementById('shu2').value;/*引用id为shu2的值到sum2里*/
+			jg = parseInt(sum1) + parseInt(sum2);		 /*parseInt的把括号里的字符转换为整型*/
+			document.getElementById('jieguo').value = jg;/*重点！！！把jg的值引用到id为jieguo的文本框里！*/
+		}
+
+		/*下 面 同 理 可 推 ~*/
+		
+		function jian(){
+			var sum1,sum2,jg;
+			sum1 = document.getElementById('shu1').value;
+			sum2 = document.getElementById('shu2').value;
+			jg = parseInt(sum1) - parseInt(sum2);
+			document.getElementById('jieguo').value = jg;
+		}
+		function cheng(){
+			var sum1,sum2,jg;
+			sum1 = document.getElementById('shu1').value;
+			sum2 = document.getElementById('shu2').value;
+			jg = parseInt(sum1) * parseInt(sum2);
+			document.getElementById('jieguo').value = jg;
+		}
+		function chu(){
+			var sum1,sum2,jg;
+			sum1 = document.getElementById('shu1').value;
+			sum2 = document.getElementById('shu2').value;
+			jg = parseInt(sum1) / parseInt(sum2);
+			document.getElementById('jieguo').value = jg;
+		}
+	</script>
+</head>
+<body>
+	<form action="" method="post">
+		第一个数： <input type="text" name="" value="" id="shu1"><br />
+		第二个数： <input type="text" name="" value="" id="shu2"><br />
+		<input type="button" name="" value="+" onclick="jia()" style="width: 35px;height: 35px;font-size: 30px;">
+		<input type="button" name="" value="-" onclick="jian()" style="width: 35px;height: 35px;font-size: 30px;">
+		<input type="button" name="" value="*" onclick="cheng()" style="width: 35px;height: 35px;font-size: 30px;">
+		<input type="button" name="" value="/" onclick="chu()" style="width: 35px;height: 35px;font-size: 30px;"><br />
+		结果： <input type="text" name="" id="jieguo">
+	</form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var num1, fuhao, num2, jieguo;
+		num1 = prompt('请输入第一个值：');
+		fuhao = prompt('请输入符号：');
+		num2 =  prompt('请输入第二个值：');
+
+		if(fuhao == '+'){
+			jieguo = parseInt(num1) + parseInt(num2);
+			alert(jieguo);
+		}else if(fuhao == '-'){
+			jieguo = parseInt(num1) - parseInt(num2);
+			alert(jieguo);
+		}else if (fuhao == '*') {
+			jieguo = parseInt(num1) * parseInt(num2);
+			alert(jieguo);
+		}else if (fuhao == '/') {
+			jieguo = parseInt(num1) / parseInt(num2);
+			alert(jieguo);
+		}else {
+			alert('输入的数值有误！')
+		}
+	</script>
+</body>
+</html>

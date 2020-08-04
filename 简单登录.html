@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	账号<input type="text" name="" id="text"><br>
+	密码<input type="password" name="" id="password"><br>
+	<button id="btn">按钮</button>
+	<script type="text/javascript">
+		var btn = document.getElementById("btn");
+		var text = document.getElementById('text');
+		var password = document.getElementById('password');
+		btn.onclick = function(){
+			if(text.value == '林福熙' && password.value == '123456'){
+				alert('登录成功');
+			}else if(!(text.value.length >= 3 && text.value.length <=10)){
+				alert("您输入的账号不规范！");
+			}else if(!(password.value.length >= 6 && password.value.length <= 20)){
+				alert('您的密码有误！');
+			}else{
+				alert('您的账户密码为注册，非本网站用户，请先注册');
+			}
+		}
+	</script>
+</body>
+</html>

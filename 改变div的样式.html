@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>改变div的样式</title>
+	<style type="text/css">
+	#div1{
+		width:100px;
+		height: 100px;
+	}
+	.div1{
+		background-color: #ccc;
+	}
+	.red{
+		background-color: red;
+	}
+</style>
+</head>
+<body>
+	<div id="div1" class="div1"></div>
+	<button onclick="red()">红色</button>
+
+	<script type="text/javascript">
+		function red(){
+			var div = document.getElementById("div1");
+			div.setAttribute("class","red");//设置class为red
+		}
+	</script>
+</body>
+</html>

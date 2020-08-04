@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		#mouse{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			background-color: red;
+			position: absolute;
+		}
+	</style>
+</head>
+<body>
+	<div id="mouse"></div>
+	<script type="text/javascript">
+		var mouse = document.getElementById('mouse');
+		document.onclick = function(event){
+			var event = event || window.event;
+			var pageX = event.pageX||event.clientX+document.documentElement.scrollLeft;
+			var pageY = event.pageY||event.clientY+document.documentElement.scrollTop;
+			var targetX = pageX - mouse.offsetWidth/2;
+			var targetY = pageY - mouse.offsetHeight/2;
+			mouse.style.display='block';
+			mouse.style.left=targetX+'px';
+			mouse.style.top=targetY+'px';
+			// alert('您所单击的位置高为：'+pageY+'宽为：'+pageX);
+		}
+	</script>
+</body>
+</html>

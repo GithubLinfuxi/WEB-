@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>大小写转换</title>
+	<script type="text/javascript">
+		// function daxie(){
+		// 	var text1 = document.getElementById("text1").value;
+		// 	var text1 = text1.toUpperCase();
+		// 	document.getElementById("text2").value=text1;
+		// }
+		// function xiaoxie(){
+		// 	var text1 = document.getElementById("text1").value;
+		// 	var text1 = text1.toLowerCase();
+		// 	document.getElementById("text2").value=text1;
+		// }
+		function zh(dx){
+			var text1 = document.getElementById("text1").value;
+			if(dx == '大写'){
+				var text1 = text1.toUpperCase();
+			}
+			if(dx == '小写'){
+				var text1 = text1.toLowerCase();
+			}
+			document.getElementById("text2").value=text1;
+		}
+	</script>
+</head>
+<body>
+<h1>大小写转换</h1>
+<!-- 	<form enctype="" method="post">
+		转换前: <input type="text" name="" id="text1">
+		<br>
+		<input type="button" name="" value="转换为大写" onclick="daxie()">
+		<input type="button" name="" value="转换为小写" onclick="xiaoxie()">
+		<br>
+		转换后:<input type="text" name="" id="text2">
+	</form> -->
+	<form enctype="" method="post">
+		转换前: <input type="text" name="" id="text1">
+		<br>
+		<input type="button" name="" value="转换为大写" onclick="zh('大写')">
+		<input type="button" name="" value="转换为小写" onclick="zh('小写')">
+		<br>
+		转换后:<input type="text" name="" id="text2">
+	</form>
+</body>
+</html>
